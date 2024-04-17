@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Robbie Radev's Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.2/css/all.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card-top">
+      <h1>Hi everyone! My name's Robbie! 😄</h1>
+      <img class="robbie-image" src="./images/Robbie-image.JPG" alt="Robbie photo">
+      <p>I am a Full Stack Web Developer and a current student at <a href="https://www.lewagon.com" target="_blank">Le Wagon! 👨🏻‍💻</a><br>
+      I have a huge passion for creating websites and apps to make people's lives easier! 😸</p>
+      <a href="https://rb.gy/93r4yu" target="_blank" class="button">Internships!</a>
+    </div>
+
+    <div class="card-bottom">
+      <h2>My social links:</h2>
+      <ul class="list-inline">
+        <li>
+          <a href="http://www.linkedin.com/in/robertradev/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.github.com/robbieradev/" target="_blank">
+            <i class="fab fa-github-square"></i>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.instagram.com/robbie.radev/" target="_blank">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="game-container">
+      <h2>Let's play Rock, Paper, Scissors!</h2>
+      <div class="choices">
+        <a href="#" class="button" onclick="playGame('rock', event)">Rock</a>
+        <a href="#" class="button" onclick="playGame('paper', event)">Paper</a>
+        <a href="#" class="button" onclick="playGame('scissors', event)">Scissors</a>
+      </div>
+      <p id="result"></p>
+    </div>
+
+  <script>
+  function playGame(playerChoice, event) {
+    event.preventDefault(); // Prevent the default behavior of anchor tags
+    const choices = ["rock", "paper", "scissors"];
+    const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    let result;
+    if (playerChoice === computerChoice) {
+      result = "It's a tie!";
+    } else if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+    result = "You win!";
+    } else {
+    result = "Computer wins!";
+    }
+
+  document.getElementById("result").innerText = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
+  }
+  </script>
+</body>
+</html>

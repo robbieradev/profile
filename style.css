@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Reem Kufi Fun", sans-serif;
+  color: #242c2e;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 600;
+  background: linear-gradient(-45deg, #264653, #2a9d8f, #e9c46a, #de7e2e, #db3939);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.container {
+  overflow: hidden;
+  padding: 40px;
+  margin: auto;
+  text-align: center;
+  opacity: 0.9;
+  width: 50%;
+}
+
+.robbie-image {
+  height: 300px;
+  margin: 10px;
+  border-radius: 60%;
+  transition: transform 0.4s ease;
+  box-shadow: 0px 0px 8px #ffffff;
+}
+
+.robbie-image:hover {
+  transform: scale(1.1);
+}
+
+.card-top {
+  background-color:rgba(225,225,225,0.6);
+  /* background-color: transpa; */
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+  margin: auto;
+  padding: 20px;
+  margin: 20px;
+}
+
+.button {
+  text-decoration: none;
+  color: whitesmoke;
+  background: linear-gradient(-45deg, #3d4041, #709893, #4c4c4c);
+  border: 2px solid #8656ef;
+  padding: 8px 18px;
+  margin: 0 10px;
+  margin-bottom: 10px;
+  transition: color 0.5s, border-color 0.5s, background-position 0.5s; /* Added background-position */
+  animation: gradient 15s ease infinite;
+  cursor: pointer
+}
+
+.card-top a :hover {
+  transform: scale(1.2);
+  transition: transform 0.4s ease;
+}
+
+.card-bottom {
+  background-color:rgba(225,225,225,0.6);
+  border-radius: 10px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+  margin: auto;
+  padding: 20px;
+  margin: 25px;
+  text-align: center;
+  cursor: hover;
+}
+
+.list-inline li {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.list-inline li a {
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+  margin-right: 40px; /* WHY did I keep getting errors with the icons*/
+
+}
+
+.list-inline li a :hover{
+transform: scale(1.2);
+transition: transform 0.4s ease;
+}
+
+h1 {
+  color: #1e1825;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+h2, h3 {
+  color: #4B4453;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #845EC2;
+  cursor: pointer;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 960px) {
+  /* For a screen < 960px, this CSS will be read */
+  .container {
+    width: 700px;
+  }
+}
+
+@media (max-width: 720px) {
+  /* For a screen < 720px, this CSS will be read */
+  .container {
+    width: 500px;
+  }
+}
+
+@media (max-width: 540px) {
+  /* For a screen < 540px, this CSS will be read */
+  .container {
+    width: 300px;
+  }
+}
+
+@media(max-width: 768px) {
+  .robbie-image {
+    height: 200px;
+  }
+}
